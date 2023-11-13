@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "parser/LiteralParser.h"
+#include "parser/Lexer.h"
 #include "parser/AbstractSyntaxTreeBuilder.h"
 #include "runner/ScopeInterpreter.h"
 

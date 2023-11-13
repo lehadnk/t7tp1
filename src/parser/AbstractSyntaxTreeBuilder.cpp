@@ -6,12 +6,12 @@
 #include "AbstractSyntaxTreeBuilder.h"
 
 #include <utility>
-#include "LiteralParser.h"
+#include "Lexer.h"
 
 Scope AbstractSyntaxTreeBuilder::build(std::string code)
 {
-    auto literalParser = new LiteralParser(std::move(code));
-    this->lexemes = literalParser->parse();
+    auto lexer = new Lexer(std::move(code));
+    this->lexemes = lexer->parse();
     this->index = 0;
 
     return *this->parseScope();

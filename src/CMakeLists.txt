@@ -3,13 +3,13 @@ project(t7tp1_src)
 set(HEADER_FILES runner/ScopeInterpreter.h dto/Scope.h dto/Variable.h enum/VariableType.h
         parser/AbstractSyntaxTreeBuilder.cpp
         parser/AbstractSyntaxTreeBuilder.h
-        parser/LiteralParser.cpp
-        parser/LiteralParser.h)
+        parser/Lexer.cpp
+        parser/Lexer.h)
 set(SOURCE_FILES runner/ScopeInterpreter.cpp
         parser/AbstractSyntaxTreeBuilder.cpp
         parser/AbstractSyntaxTreeBuilder.h
-        parser/LiteralParser.cpp
-        parser/LiteralParser.h
+        parser/Lexer.cpp
+        parser/Lexer.h
         dto/Lexeme.h
         enum/TokenType.h
         dto/AstNode.h

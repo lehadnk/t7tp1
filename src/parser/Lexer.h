@@ -2,18 +2,18 @@
 // Created by Алексей Заузин on 04.11.2023.
 //
 
-#ifndef T7TP1_LITERALPARSER_H
-#define T7TP1_LITERALPARSER_H
+#ifndef T7TP1_LEXER_H
+#define T7TP1_LEXER_H
 
 #include <string>
 #include <utility>
 #include "dto/Lexeme.h"
 
-class LiteralParser {
-    std::vector<Lexeme> lexems;
+class Lexer {
+    std::vector<Lexeme> lexemes;
     std::string code;
 public:
-    explicit LiteralParser(std::string code)
+    explicit Lexer(std::string code)
     {
         this->code = std::move(code);
     }
@@ -29,4 +29,4 @@ private:
 };
 
 
-#endif //T7TP1_LITERALPARSER_H
+#endif //T7TP1_LEXER_H

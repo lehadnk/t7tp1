@@ -2,10 +2,10 @@
 // Created by Алексей Заузин on 04.11.2023.
 //
 #include <regex>
-#include "LiteralParser.h"
+#include "Lexer.h"
 #include "dto/Lexeme.h"
 
-void LiteralParser::next()
+void Lexer::next()
 {
     auto lexeme = Lexeme();
 
@@ -41,10 +41,10 @@ void LiteralParser::next()
         lexeme.tokenType = this->getTokenType(lexeme.token);
     }
 
-    this->lexems.emplace_back(lexeme);
+    this->lexemes.emplace_back(lexeme);
 }
 
-TokenType LiteralParser::getTokenType(std::string &token) {
+TokenType Lexer::getTokenType(std::string &token) {
     if (token == "(") {
         return tt_parentheses_open;
     }
@@ -120,16 +120,16 @@ TokenType LiteralParser::getTokenType(std::string &token) {
     return tt_unknown;
 }
 
-std::vector<Lexeme> LiteralParser::parse() {
+std::vector<Lexeme> Lexer::parse() {
     this->index = 0;
-    this->lexems = std::vector<Lexeme>();
+    this->lexemes = std::vector<Lexeme>();
     while(!this->isEndOfFile()) {
         this->next();
     }
 
-    return this->lexems;
+    return this->lexemes;
 }
 
-bool LiteralParser::isEndOfFile() {
+bool Lexer::isEndOfFile() {
     return this->index == this->code.size();
 }
