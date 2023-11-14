@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * ArithmeticOperatorHandler.h
+ * Contains headers for AbstractOperationsHandler
+ */
 
 #ifndef T7TP1_ARITHMETICOPERATORHANDLER_H
 #define T7TP1_ARITHMETICOPERATORHANDLER_H

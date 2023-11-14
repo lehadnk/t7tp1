@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 12.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * ForLoopHandler.h
+ * Contains headers for ForLoopHandler
+ */
 
 #ifndef T7TP1_FORLOOPHANDLER_H
 #define T7TP1_FORLOOPHANDLER_H

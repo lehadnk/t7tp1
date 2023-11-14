@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 04.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * AbstractSyntaxTreeBuilder.cpp
+ * Contains AbstractSyntaxTreeBuilder class method definitions
+ */
 
 
 #include "AbstractSyntaxTreeBuilder.h"

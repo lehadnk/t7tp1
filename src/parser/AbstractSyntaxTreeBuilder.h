@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 04.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * AbstractSyntaxTreeBuilder.h
+ * Hedaer file for AbstractSyntaxTreeBuilder
+ */
 
 #ifndef T7TP1_ABSTRACTSYNTAXTREEBUILDER_H
 #define T7TP1_ABSTRACTSYNTAXTREEBUILDER_H

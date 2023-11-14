@@ -1,6 +1,9 @@
-//
-// Created by Алексей Заузин on 04.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * Lexer.cpp
+ * Contains Lexer method definitions
+ */
+
 #include <regex>
 #include "Lexer.h"
 #include "dto/Lexeme.h"

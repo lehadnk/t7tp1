@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * AssignmentHandler.h
+ * Contains headers for AssignmentHandler
+ */
 
 #ifndef T7TP1_ASSIGNMENTHANDLER_H
 #define T7TP1_ASSIGNMENTHANDLER_H

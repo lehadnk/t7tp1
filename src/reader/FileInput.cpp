@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * FileInput.cpp
+ * Contains file input component that loads scripts from the file system
+ */
 
 #include <fstream>
 #include <filesystem>

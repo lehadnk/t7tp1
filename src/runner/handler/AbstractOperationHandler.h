@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 12.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * AbstractOperationHandler.h
+ * Contains header files for AbstractOperationHandler
+ */
 
 #ifndef T7TP1_ABSTRACTOPERATIONHANDLER_H
 #define T7TP1_ABSTRACTOPERATIONHANDLER_H

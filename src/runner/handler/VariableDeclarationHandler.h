@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * VariableDeclarationHandler
+ * Contains headers for VariableDeclarationHandler
+ */
 
 #ifndef T7TP1_VARIABLEDECLARATIONHANDLER_H
 #define T7TP1_VARIABLEDECLARATIONHANDLER_H

@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 07.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * AstNode.h
+ * Contains abstract syntax tree node definition and dump method for debug purposes
+ */
 
 #ifndef T7TP1_ASTNODE_H
 #define T7TP1_ASTNODE_H

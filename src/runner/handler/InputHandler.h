@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * InputHandler.h
+ * Contains headers for InputHandler
+ */
 
 #ifndef T7TP1_INPUTHANDLER_H
 #define T7TP1_INPUTHANDLER_H

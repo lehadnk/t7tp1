@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * PrintOperationHandler.h
+ * Contains headers for PrintOperationHandler
+ */
 
 #ifndef T7TP1_PRINTOPERATIONHANDLER_H
 #define T7TP1_PRINTOPERATIONHANDLER_H

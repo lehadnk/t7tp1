@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * ComparisonOperatorHandler.cpp
+ * Contains the implementation for ComparisonOperatorHandler
+ */
 
 #include "ComparisonOperatorHandler.h"
 

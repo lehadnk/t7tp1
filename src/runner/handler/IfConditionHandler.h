@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * AstNode.h
+ * Contains headers for IfConditionHanlder
+ */
 
 #ifndef T7TP1_IFCONDITIONHANDLER_H
 #define T7TP1_IFCONDITIONHANDLER_H

@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 12.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * ForLoopHanlder.h
+ * Contains the implementation for ForLoopHandler
+ */
 
 #include "ForLoopHandler.h"
 

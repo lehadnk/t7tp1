@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * PrintOperationHandler.cpp
+ * Contains the implementation for PrintOperationHandler
+ */
 
 #include "PrintOperationHandler.h"
 

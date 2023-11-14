@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * FileInput.h
+ * Contains headers for FileInput class
+ */
 
 #ifndef T7TP1_FILEINPUT_H
 #define T7TP1_FILEINPUT_H

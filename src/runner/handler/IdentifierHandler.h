@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * IdentifierHandler.h
+ * Contains headers for IdentifierHandler
+ */
 
 #ifndef T7TP1_IDENTIFIERHANDLER_H
 #define T7TP1_IDENTIFIERHANDLER_H

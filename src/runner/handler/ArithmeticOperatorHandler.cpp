@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * ArithmeticOperatorHandler.cpp
+ * Contains the implementation for ArithmeticOperationsHandler
+ */
 
 #include "ArithmeticOperatorHandler.h"
 

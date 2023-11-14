@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 31.10.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * ScopeInterpreter.cpp
+ * Contains ScopeInterpreter method definitions
+ */
 
 #include "ScopeInterpreter.h"
 #include "runner/handler/ForLoopHandler.h"

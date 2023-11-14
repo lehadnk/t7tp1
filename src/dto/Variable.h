@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 31.10.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * Variable.h
+ * Contains variable definition
+ */
 
 #ifndef T7TP1_VARIABLE_H
 #define T7TP1_VARIABLE_H

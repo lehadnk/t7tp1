@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * IfConditionHandler.cpp
+ * Contains the implementations for IfConditionHanlder
+ */
 
 #include "IfConditionHandler.h"
 

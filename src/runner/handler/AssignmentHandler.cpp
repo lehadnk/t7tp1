@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * AssignmentHandler.cpp
+ * Contains the implementation for AssignmentHandler class
+ */
 
 #include "AssignmentHandler.h"
 

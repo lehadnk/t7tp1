@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 05.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * TokenType.h
+ * Contains TokenType enum
+ */
 
 #ifndef T7TP1_TOKENTYPE_H
 #define T7TP1_TOKENTYPE_H

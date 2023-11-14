@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 31.10.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * VariableType.h
+ * Contains VariableType enum
+ */
 
 #ifndef T7TP1_VARIABLETYPE_H
 #define T7TP1_VARIABLETYPE_H

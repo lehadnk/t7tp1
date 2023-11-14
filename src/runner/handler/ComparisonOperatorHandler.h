@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * ComparisonOperatorHandler.h
+ * Contains the implementation for ComparisonOperatorHandler
+ */
 
 #ifndef T7TP1_COMPARISONOPERATORHANDLER_H
 #define T7TP1_COMPARISONOPERATORHANDLER_H

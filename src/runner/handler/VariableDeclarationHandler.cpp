@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 13.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * VariableDeclarationHandler.cpp
+ * Contain the implementation for VariableDeclarationHandler
+ */
 
 #include "VariableDeclarationHandler.h"
 

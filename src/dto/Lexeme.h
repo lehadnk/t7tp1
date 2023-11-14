@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 05.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * Lexeme.h
+ * Contains lexeme structure definition
+ */
 
 #ifndef T7TP1_LEXEME_H
 #define T7TP1_LEXEME_H

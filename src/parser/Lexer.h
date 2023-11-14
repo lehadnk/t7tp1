@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 04.11.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * Lexer.h
+ * Header file for Lexer
+ */
 
 #ifndef T7TP1_LEXER_H
 #define T7TP1_LEXER_H

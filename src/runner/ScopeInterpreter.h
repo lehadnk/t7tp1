@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 31.10.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * ScopeInterpreter.h
+ * Contains headers for ScopeInterpreter
+ */
 
 #ifndef T7TP1_SCOPEINTERPRETER_H
 #define T7TP1_SCOPEINTERPRETER_H

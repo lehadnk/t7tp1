@@ -1,6 +1,8 @@
-//
-// Created by Алексей Заузин on 31.10.2023.
-//
+/**
+ * @author Alexey Zauzin
+ * Scope.h
+ * Contains scope definition
+ */
 
 #ifndef T7TP1_SCOPE_H
 #define T7TP1_SCOPE_H
