@@ -17,29 +17,29 @@ private:
 
         std::cout << prefix;
         std::cout << (is_left ? "├──" : "└──");
-        std::cout << node->operation->token << std::endl;
+        std::cout << node->root->token << std::endl;
 
         this->dump(prefix + (is_left ? "│   " : "    "), node->left, true);
         this->dump(prefix + (is_left ? "│   " : "    "), node->right, false);
     }
 public:
-    Lexeme* operation;
+    Lexeme* root;
     struct AstNode* left;
     struct AstNode* right;
 
     AstNode() = default;
 
     AstNode(Lexeme *lexeme) {
-        this->operation = lexeme;
+        this->root = lexeme;
     }
 
     AstNode(Lexeme *lexeme, AstNode* left) {
-        this->operation = lexeme;
+        this->root = lexeme;
         this->left = left;
     }
 
     AstNode(Lexeme *lexeme, AstNode* left, AstNode* right) {
-        this->operation = lexeme;
+        this->root = lexeme;
         this->left = left;
         this->right = right;
     }

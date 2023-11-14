@@ -11,13 +11,16 @@ void Lexer::next()
 
     for(; this->index < code.size(); this->index++) {
         if (lexeme.token.empty() && lexeme.tokenType != tt_string && (code[this->index] == ' ' || code[this->index] == '\n')) {
+            // We skip empty spaces and new lines outside of strings
             continue;
         }
         if (lexeme.token.empty() && lexeme.tokenType == tt_unknown && code[this->index] == '"') {
+            // If the first symbol is " then it's string
             lexeme.tokenType = tt_string;
             continue;
         }
         if (!lexeme.token.empty() && lexeme.tokenType != tt_string && (code[this->index] == ' ' || code[this->index] == '\n' || code[this->index] == ';' || code[this->index] == '(' || code[this->index] == ')')) {
+            // If lexeme is not string, and space, new line, semicolon or braces are encountered, this means that we reached end of lexeme
             break;
         }
         if (lexeme.tokenType == tt_string && code[this->index] == '"') {

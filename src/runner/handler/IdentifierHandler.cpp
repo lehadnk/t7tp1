@@ -5,22 +5,22 @@
 #include "IdentifierHandler.h"
 
 Lexeme *IdentifierHandler::handle(Scope *scope, AstNode *node, AstNode* parentNode) {
-    auto variable = scope->variables.find(node->operation->token);
+    auto variable = scope->variables.find(node->root->token);
     if (variable == scope->variables.end()) {
-        if (parentNode != nullptr && parentNode->operation->tokenType == tt_variable_declaration) {
+        if (parentNode != nullptr && parentNode->root->tokenType == tt_variable_declaration) {
             // Variable declaration could handle unknown identifiers in the tree
-            return node->operation;
+            return node->root;
         }
-        throw std::runtime_error("Unknown identifier: " + node->operation->token);
+        throw std::runtime_error("Unknown identifier: " + node->root->token);
     }
 
-    node->operation->token = variable->second.value;
+    node->root->token = variable->second.value;
     if (variable->second.type == var_int) {
-        node->operation->tokenType = tt_integer;
+        node->root->tokenType = tt_integer;
     }
     if (variable->second.type == var_str) {
-        node->operation->tokenType = tt_string;
+        node->root->tokenType = tt_string;
     }
 
-    return node->operation;
+    return node->root;
 }

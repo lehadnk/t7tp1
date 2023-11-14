@@ -55,7 +55,7 @@ AstNode* AbstractSyntaxTreeBuilder::parseVariableDeclaration()
 {
     // Variable declaration statement
     auto node = new AstNode;
-    node->operation = this->getCurrent();
+    node->root = this->getCurrent();
     this->index++;
 
     if (this->getCurrent()->tokenType != tt_identifier) {
@@ -76,7 +76,7 @@ AstNode* AbstractSyntaxTreeBuilder::parseVariableDeclaration()
 AstNode* AbstractSyntaxTreeBuilder::parsePrintStatement()
 {
     auto node = new AstNode;
-    node->operation = this->getCurrent();
+    node->root = this->getCurrent();
     this->index++;
 
     if (this->getCurrent()->tokenType != tt_identifier && this->getCurrent()->tokenType != tt_parentheses_open && this->getCurrent()->tokenType != tt_string) {
@@ -91,7 +91,7 @@ AstNode* AbstractSyntaxTreeBuilder::parseIdentifier()
 {
     // Assignment statement
     auto node = new AstNode;
-    node->operation = new Lexeme("=", tt_assignment);
+    node->root = new Lexeme("=", tt_assignment);
     node->left = new AstNode(this->getCurrent());
     this->index++;
 
@@ -108,7 +108,7 @@ AstNode* AbstractSyntaxTreeBuilder::parseIdentifier()
 AstNode* AbstractSyntaxTreeBuilder::parseInputStatement()
 {
     auto node = new AstNode;
-    node->operation = this->getCurrent();
+    node->root = this->getCurrent();
     this->index++;
 
     if (this->getCurrent()->tokenType != tt_identifier) {
@@ -121,7 +121,7 @@ AstNode* AbstractSyntaxTreeBuilder::parseInputStatement()
 
 AstNode* AbstractSyntaxTreeBuilder::parseIfStatement(Scope *scope) {
     auto node = new AstNode;
-    node->operation = this->getCurrent();
+    node->root = this->getCurrent();
     this->index++;
 
     if (this->getCurrent()->tokenType != tt_parentheses_open) {
@@ -153,7 +153,7 @@ AstNode* AbstractSyntaxTreeBuilder::parseIfStatement(Scope *scope) {
 
 AstNode* AbstractSyntaxTreeBuilder::parseForStatement(Scope* scope) {
     auto node = new AstNode;
-    node->operation = this->getCurrent();
+    node->root = this->getCurrent();
     this->index++;
 
     if (this->getCurrent()->tokenType != tt_parentheses_open) {
@@ -169,7 +169,7 @@ AstNode* AbstractSyntaxTreeBuilder::parseForStatement(Scope* scope) {
     this->index++;
 
     node->right = new AstNode;
-    node->right->operation = new Lexeme("exit_condition", tt_for);
+    node->right->root = new Lexeme("exit_condition", tt_for);
     node->right->left = this->parseBooleanExpression();
 
     if (this->getCurrent()->tokenType != tt_semicolon) {
@@ -178,7 +178,7 @@ AstNode* AbstractSyntaxTreeBuilder::parseForStatement(Scope* scope) {
     this->index++;
 
     node->right->right = new AstNode;
-    node->right->right->operation = new Lexeme("expression", tt_for);
+    node->right->right->root = new Lexeme("expression", tt_for);
     node->right->right->left = this->parseStatement(scope);
 
     if (this->getCurrent()->tokenType != tt_parentheses_close) {
@@ -219,7 +219,7 @@ AstNode* AbstractSyntaxTreeBuilder::parseBooleanExpression()
     if (this->getCurrent()->tokenType != tt_comparison_operator) {
         throw std::runtime_error("Expected comparison operator, got " + this->getCurrent()->token);
     }
-    node->operation = this->getCurrent();
+    node->root = this->getCurrent();
     this->index++;
 
     if (this->getCurrent()->tokenType != tt_integer && this->getCurrent()->tokenType != tt_string && this->getCurrent()->tokenType != tt_identifier) {

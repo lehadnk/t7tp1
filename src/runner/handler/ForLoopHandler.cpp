@@ -8,7 +8,7 @@ AstNode *copyAstNode(AstNode *root) {
     AstNode *newRoot;
     if (root != NULL) {
         newRoot = new AstNode;
-        newRoot->operation = new Lexeme(root->operation->token, root->operation->tokenType);
+        newRoot->root = new Lexeme(root->root->token, root->root->tokenType);
         newRoot->left = copyAstNode(root->left);
         newRoot->right = copyAstNode(root->right);
     } else {
@@ -34,7 +34,7 @@ Lexeme* ForLoopHandler::handle(Scope* scope, AstNode* node, AstNode *parentNode)
 
     auto exitConditionCopy = copyAstNode(node->right->left);
     auto continueLoopCopy = copyAstNode(node->right->right->left);
-    auto subscope = &scope->subscopes[std::stoi(node->right->right->right->operation->token)];
+    auto subscope = &scope->subscopes[std::stoi(node->right->right->right->root->token)];
     auto bodyCopy = copyAstNodeVector(subscope->ast);
     while(this->scope_runner->processNode(scope, node->right->left, nullptr)->token != "0") {
         subscope->variables = scope->variables;
@@ -47,5 +47,5 @@ Lexeme* ForLoopHandler::handle(Scope* scope, AstNode* node, AstNode *parentNode)
         node->right->right->left = copyAstNode(continueLoopCopy);
     }
 
-    return node->operation;
+    return node->root;
 }

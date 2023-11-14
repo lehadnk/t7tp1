@@ -5,18 +5,18 @@
 #include "ComparisonOperatorHandler.h"
 
 Lexeme *ComparisonOperatorHandler::handle(Scope *scope, AstNode *node, AstNode *parentNode) {
-    if (node->operation->token == "<") {
-        if (std::stoi(node->left->operation->token) < std::stoi(node->right->operation->token)) {
+    if (node->root->token == "<") {
+        if (std::stoi(node->left->root->token) < std::stoi(node->right->root->token)) {
             return new Lexeme("1", tt_integer);
         }
     }
-    if (node->operation->token == ">") {
-        if (std::stoi(node->left->operation->token) > std::stoi(node->right->operation->token)) {
+    if (node->root->token == ">") {
+        if (std::stoi(node->left->root->token) > std::stoi(node->right->root->token)) {
             return new Lexeme("1", tt_integer);
         }
     }
-    if (node->operation->token == "==") {
-        if (node->left->operation->token == node->right->operation->token) {
+    if (node->root->token == "==") {
+        if (node->left->root->token == node->right->root->token) {
             return new Lexeme("1", tt_integer);
         }
     }

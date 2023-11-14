@@ -20,52 +20,52 @@ void ScopeInterpreter::run(Scope* scope) {
 }
 
 Lexeme* ScopeInterpreter::processNode(Scope* scope, AstNode* node, AstNode* parentNode) { // NOLINT(*-no-recursion)
-    if (node->operation->tokenType == tt_for) {
+    if (node->root->tokenType == tt_for) {
         auto handler = new ForLoopHandler(this);
         return handler->handle(scope, node, parentNode);
     }
 
-    if (node->operation->tokenType == tt_if) {
+    if (node->root->tokenType == tt_if) {
         auto handler = new IfConditionHandler(this);
         return handler->handle(scope, node, parentNode);
     }
-    if (node->operation->tokenType == tt_input) {
+    if (node->root->tokenType == tt_input) {
         auto handler = new InputHandler(this);
         return handler->handle(scope, node, parentNode);
     }
     if (node->right != nullptr) {
-        node->right->operation = this->processNode(scope, node->right, node);
+        node->right->root = this->processNode(scope, node->right, node);
     }
-    if (node->operation->tokenType == tt_assignment) {
+    if (node->root->tokenType == tt_assignment) {
         auto handler = new AssignmentHandler(this);
         return handler->handle(scope, node, parentNode);
     }
     if (node->left != nullptr) {
-        node->left->operation = this->processNode(scope, node->left, node);
+        node->left->root = this->processNode(scope, node->left, node);
     }
-    if (node->operation->tokenType == tt_arithmetic_operator) {
+    if (node->root->tokenType == tt_arithmetic_operator) {
         auto handler = new ArithmeticOperatorHandler(this);
         handler->handle(scope, node, parentNode);
     }
-    if (node->operation->tokenType == tt_variable_declaration) {
+    if (node->root->tokenType == tt_variable_declaration) {
         auto handler = new VariableDeclarationHandler(this);
         handler->handle(scope, node, parentNode);
     }
-    if (node->operation->tokenType == tt_identifier) {
+    if (node->root->tokenType == tt_identifier) {
         auto handler = new IdentifierHandler(this);
         return handler->handle(scope, node, parentNode);
     }
-    if (node->operation->tokenType == tt_integer || node->operation->tokenType == tt_string) {
-        return node->operation;
+    if (node->root->tokenType == tt_integer || node->root->tokenType == tt_string) {
+        return node->root;
     }
-    if (node->operation->tokenType == tt_print) {
+    if (node->root->tokenType == tt_print) {
         auto handler = new PrintOperationHandler(this);
         return handler->handle(scope, node, parentNode);
     }
-    if (node->operation->tokenType == tt_comparison_operator) {
+    if (node->root->tokenType == tt_comparison_operator) {
         auto handler = new ComparisonOperatorHandler(this);
         return handler->handle(scope, node, parentNode);
     }
 
-    return node->operation;
+    return node->root;
 }
